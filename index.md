@@ -521,16 +521,26 @@ This divide creates inequalities in opportunities, resources, and participation 
 ## Essential Formulas
 
 ### Bit Calculations
-| Formula | Purpose | Example |
-|---------|---------|---------|
-| **2ⁿ - 1** | Largest value with n bits | 8 bits: 2⁸ - 1 = **255** |
-| **2ⁿ** | Total unique values with n bits | 8 bits: 2⁸ = **256** values (0-255) |
+
+**Largest value with n bits:**
+- Formula: `2^n - 1`
+- Example: 8 bits → 2^8 - 1 = 256 - 1 = **255**
+
+**Total unique values with n bits:**
+- Formula: `2^n`
+- Example: 8 bits → 2^8 = **256** values (representing 0-255)
 
 ### IPv4 vs IPv6
-| Version | Format | Total Addresses | Example |
-|---------|--------|-----------------|---------|
-| **IPv4** | Four decimal numbers (0-255) | 2³² ≈ 4.3 billion | 74.125.20.113 |
-| **IPv6** | Eight hexadecimal groups | 2¹²⁸ ≈ 340 undecillion | 2001:0db8:0000:0042:0000:8a2e:0370:7334 |
+
+**IPv4:**
+- Format: Four decimal numbers (0-255) separated by periods
+- Example: 74.125.20.113
+- Total addresses: 2^32 ≈ 4.3 billion
+
+**IPv6:**
+- Format: Eight hexadecimal groups separated by colons
+- Example: 2001:0db8:0000:0042:0000:8a2e:0370:7334
+- Total addresses: 2^128 ≈ 340 undecillion
 
 ---
 
@@ -545,10 +555,16 @@ This divide creates inequalities in opportunities, resources, and participation 
 - **Data Abstraction:** Filtering details to focus on needed information
 
 ### Compression
-| Type | Data Loss | Use Cases | Examples |
-|------|-----------|-----------|----------|
-| **Lossless** | None | Text, programs, exact data | ZIP, PNG |
-| **Lossy** | Some (permanent) | Media files, file size priority | JPEG, MP3, MP4 |
+
+**Lossless Compression:**
+- Data Loss: None
+- Use Cases: Text files, programs, exact data
+- Examples: ZIP, PNG
+
+**Lossy Compression:**
+- Data Loss: Some (permanent)
+- Use Cases: Media files where file size is priority
+- Examples: JPEG, MP3, MP4
 
 ### Network Fundamentals
 - **Internet:** Interconnected networks using open, standardized protocols
@@ -559,11 +575,21 @@ This divide creates inequalities in opportunities, resources, and participation 
 - **Protocol:** Standard set of rules for communication
 
 ### Protocols Comparison
-| Protocol | Reliability | Speed | Error Checking | Use Cases |
-|----------|-------------|-------|----------------|-----------|
-| **TCP** | High (guaranteed delivery) | Slower | Yes | Web browsing, file transfers, email |
-| **UDP** | Low (no guarantee) | Faster | No | Streaming, gaming, VoIP |
-| **HTTP** | N/A | N/A | N/A | World Wide Web communication |
+
+**TCP (Transmission Control Protocol):**
+- Reliability: High (guaranteed delivery)
+- Speed: Slower
+- Error Checking: Yes
+- Use Cases: Web browsing, file transfers, email
+
+**UDP (User Datagram Protocol):**
+- Reliability: Low (no guarantee)
+- Speed: Faster
+- Error Checking: No
+- Use Cases: Streaming, gaming, VoIP
+
+**HTTP (Hypertext Transfer Protocol):**
+- Purpose: World Wide Web communication between browsers and servers
 
 ### Network Design
 - **Scalability:** Ability to grow and meet new demands

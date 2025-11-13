@@ -608,119 +608,100 @@ This divide creates inequalities in opportunities, resources, and participation 
 ### Data Section
 
 **Q1:** How many unique values can you represent with 6 bits?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** 2⁶ = **64 unique values** (representing 0 through 63)
-</details>
+
+---
 
 **Q2:** What is the largest value you can represent with 10 bits?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** 2¹⁰ - 1 = 1024 - 1 = **1023**
-</details>
+
+---
 
 **Q3:** Is a temperature sensor reading analog or digital data? Why?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** **Analog data** - Temperature changes continuously over time. However, when stored in a computer, it must be sampled at regular intervals and converted to digital data.
-</details>
+
+---
 
 **Q4:** Should you use lossless or lossy compression for a medical X-ray image? Why?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** **Lossless compression** - Medical images require perfect accuracy for diagnosis. Any loss of detail could lead to misdiagnosis or missed conditions.
-</details>
+
+---
 
 **Q5:** Convert binary 1101 to decimal.
-<details>
-<summary>Click for answer</summary>
 
 **Answer:**
 - 1×2³ + 1×2² + 0×2¹ + 1×2⁰
 - = 8 + 4 + 0 + 1
 - = **13**
-</details>
 
 ---
 
 ### Computer Systems and Networks Section
 
 **Q6:** What are the two main components of a packet?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:**
 1. **Header** - Contains metadata (source address, destination address, sequence number, reassembly info)
 2. **Data section** - Contains the actual information being sent
-</details>
+
+---
 
 **Q7:** Can packets arrive out of order? How are they reassembled?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** **Yes**, packets can arrive out of order. TCP (Transmission Control Protocol) uses sequence numbers in the packet headers to reassemble them in the correct order at the destination.
-</details>
+
+---
 
 **Q8:** When would you choose UDP over TCP?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** Choose UDP when **speed is more important than perfect accuracy**:
 - Live video streaming
 - Online gaming
 - Voice over IP (VoIP)
 - Real-time applications where occasional data loss is acceptable
-</details>
+
+---
 
 **Q9:** Your home has 200 Mbps bandwidth but you experience lag when video calling. What's likely the issue?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** The issue is likely **high latency**, not bandwidth. Latency (delay) affects real-time communication more than bandwidth. Distance, router hops, or network congestion could be causing the lag.
-</details>
+
+---
 
 **Q10:** How does redundancy improve fault tolerance?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** Redundancy provides **backup components and alternate paths**. If one component fails (router, server, connection), traffic can automatically reroute through redundant systems, preventing complete system failure.
-</details>
 
 ---
 
 ### Digital Divide Section
 
 **Q11:** Name three factors that contribute to the digital divide.
-<details>
-<summary>Click for answer</summary>
 
 **Answer:**
 1. **Demographics** - Age and education level affect technology adoption
 2. **Socioeconomic status** - Income affects ability to purchase devices and internet service
 3. **Geographic location** - Rural areas often lack infrastructure for high-speed internet
-</details>
+
+---
 
 **Q12:** How did the 2020 COVID-19 pandemic highlight the digital divide in education?
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** When schools shifted to virtual learning, students without stable internet or devices fell behind peers with reliable technology access. This created significant educational inequalities based on digital access.
-</details>
+
+---
 
 **Q13:** Suggest two ways to reduce the digital divide.
-<details>
-<summary>Click for answer</summary>
 
 **Answer:** (Any two of these)
 - **Digital literacy programs** - Free training at libraries/community centers
 - **Infrastructure investment** - Government funding for underserved areas
 - **Device access programs** - Low-cost or free devices for students in need
 - **Policy solutions** - Net neutrality, universal broadband initiatives, affordable internet programs
-</details>
 
 ---
 

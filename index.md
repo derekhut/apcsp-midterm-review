@@ -1,5 +1,40 @@
 # 2025-2026 SCLS APCSP REVIEW MATERIALS
 
+**Last Updated:** November 13, 2025
+
+---
+
+## Table of Contents
+
+### [BIG IDEA: DATA](#big-idea-data)
+- [Number Systems](#number-systems)
+- [Bits and Bytes](#bits-and-bytes)
+- [Calculations with Bits](#calculations-with-bits)
+- [Analog vs. Digital Data](#analog-vs-digital-data)
+- [Data Abstraction](#data-abstraction)
+- [Data Compression](#data-compression)
+  - [Lossless Compression](#lossless-data-compression)
+  - [Lossy Compression](#lossy-data-compression)
+
+### [BIG IDEA: COMPUTER SYSTEMS AND NETWORKS](#big-idea-computer-systems-and-networks)
+- [The Internet](#the-internet)
+- [Computing Components](#computing-components)
+- [Packets and Routing](#how-data-travels-packets-and-routing)
+- [Network Performance Metrics](#network-performance-metrics)
+- [Internet Protocols](#internet-protocols)
+  - [TCP/IP](#tcpip-transmission-control-protocol--internet-protocol)
+  - [UDP](#udp-user-datagram-protocol)
+  - [HTTP](#http-hypertext-transfer-protocol)
+- [Network Design Principles](#network-design-principles)
+
+### [THE DIGITAL DIVIDE](#the-digital-divide)
+- [Factors That Influence the Digital Divide](#factors-that-influence-the-digital-divide)
+- [Harmful Impacts](#harmful-impacts-of-the-digital-divide)
+- [Reducing the Digital Divide](#reducing-the-digital-divide)
+
+### [QUICK REFERENCE](#quick-reference)
+
+---
 
 # BIG IDEA: DATA
 
@@ -478,3 +513,195 @@ This divide creates inequalities in opportunities, resources, and participation 
 - Net neutrality protections
 - Universal broadband initiatives
 - Affordable internet programs
+
+---
+
+# QUICK REFERENCE
+
+## Essential Formulas
+
+### Bit Calculations
+| Formula | Purpose | Example |
+|---------|---------|---------|
+| **2ⁿ - 1** | Largest value with n bits | 8 bits: 2⁸ - 1 = **255** |
+| **2ⁿ** | Total unique values with n bits | 8 bits: 2⁸ = **256** values (0-255) |
+
+### IPv4 vs IPv6
+| Version | Format | Total Addresses | Example |
+|---------|--------|-----------------|---------|
+| **IPv4** | Four decimal numbers (0-255) | 2³² ≈ 4.3 billion | 74.125.20.113 |
+| **IPv6** | Eight hexadecimal groups | 2¹²⁸ ≈ 340 undecillion | 2001:0db8:0000:0042:0000:8a2e:0370:7334 |
+
+---
+
+## Key Definitions at a Glance
+
+### Data & Representation
+- **Bit:** Smallest unit of data (0 or 1)
+- **Byte:** 8 bits = 256 possible values
+- **Analog Data:** Continuous measurement over time
+- **Digital Data:** Discrete, finite set of values
+- **Sampling:** Converting analog signals to digital at regular intervals
+- **Data Abstraction:** Filtering details to focus on needed information
+
+### Compression
+| Type | Data Loss | Use Cases | Examples |
+|------|-----------|-----------|----------|
+| **Lossless** | None | Text, programs, exact data | ZIP, PNG |
+| **Lossy** | Some (permanent) | Media files, file size priority | JPEG, MP3, MP4 |
+
+### Network Fundamentals
+- **Internet:** Interconnected networks using open, standardized protocols
+- **Packet:** Small unit of data with header (metadata) and data section
+- **Routing:** Finding a path for packets from source to destination
+- **Bandwidth:** Maximum data transmitted per time unit (bps/Mbps)
+- **Latency:** Time delay between sending and receiving data (ms)
+- **Protocol:** Standard set of rules for communication
+
+### Protocols Comparison
+| Protocol | Reliability | Speed | Error Checking | Use Cases |
+|----------|-------------|-------|----------------|-----------|
+| **TCP** | High (guaranteed delivery) | Slower | Yes | Web browsing, file transfers, email |
+| **UDP** | Low (no guarantee) | Faster | No | Streaming, gaming, VoIP |
+| **HTTP** | N/A | N/A | N/A | World Wide Web communication |
+
+### Network Design
+- **Scalability:** Ability to grow and meet new demands
+- **Fault Tolerance:** Continue functioning when parts fail
+- **Redundancy:** Extra components as backup
+
+### Digital Divide
+- **Definition:** Gap between those with and without technology access
+- **Key Factors:** Demographics (age, education), socioeconomic status (income), geographic location (urban vs rural)
+- **Impact Areas:** Education, employment, civic participation, social connection
+
+---
+
+## Practice Questions
+
+### Data Section
+
+**Q1:** How many unique values can you represent with 6 bits?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** 2⁶ = **64 unique values** (representing 0 through 63)
+</details>
+
+**Q2:** What is the largest value you can represent with 10 bits?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** 2¹⁰ - 1 = 1024 - 1 = **1023**
+</details>
+
+**Q3:** Is a temperature sensor reading analog or digital data? Why?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** **Analog data** - Temperature changes continuously over time. However, when stored in a computer, it must be sampled at regular intervals and converted to digital data.
+</details>
+
+**Q4:** Should you use lossless or lossy compression for a medical X-ray image? Why?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** **Lossless compression** - Medical images require perfect accuracy for diagnosis. Any loss of detail could lead to misdiagnosis or missed conditions.
+</details>
+
+**Q5:** Convert binary 1101 to decimal.
+<details>
+<summary>Click for answer</summary>
+
+**Answer:**
+- 1×2³ + 1×2² + 0×2¹ + 1×2⁰
+- = 8 + 4 + 0 + 1
+- = **13**
+</details>
+
+---
+
+### Computer Systems and Networks Section
+
+**Q6:** What are the two main components of a packet?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:**
+1. **Header** - Contains metadata (source address, destination address, sequence number, reassembly info)
+2. **Data section** - Contains the actual information being sent
+</details>
+
+**Q7:** Can packets arrive out of order? How are they reassembled?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** **Yes**, packets can arrive out of order. TCP (Transmission Control Protocol) uses sequence numbers in the packet headers to reassemble them in the correct order at the destination.
+</details>
+
+**Q8:** When would you choose UDP over TCP?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** Choose UDP when **speed is more important than perfect accuracy**:
+- Live video streaming
+- Online gaming
+- Voice over IP (VoIP)
+- Real-time applications where occasional data loss is acceptable
+</details>
+
+**Q9:** Your home has 200 Mbps bandwidth but you experience lag when video calling. What's likely the issue?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** The issue is likely **high latency**, not bandwidth. Latency (delay) affects real-time communication more than bandwidth. Distance, router hops, or network congestion could be causing the lag.
+</details>
+
+**Q10:** How does redundancy improve fault tolerance?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** Redundancy provides **backup components and alternate paths**. If one component fails (router, server, connection), traffic can automatically reroute through redundant systems, preventing complete system failure.
+</details>
+
+---
+
+### Digital Divide Section
+
+**Q11:** Name three factors that contribute to the digital divide.
+<details>
+<summary>Click for answer</summary>
+
+**Answer:**
+1. **Demographics** - Age and education level affect technology adoption
+2. **Socioeconomic status** - Income affects ability to purchase devices and internet service
+3. **Geographic location** - Rural areas often lack infrastructure for high-speed internet
+</details>
+
+**Q12:** How did the 2020 COVID-19 pandemic highlight the digital divide in education?
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** When schools shifted to virtual learning, students without stable internet or devices fell behind peers with reliable technology access. This created significant educational inequalities based on digital access.
+</details>
+
+**Q13:** Suggest two ways to reduce the digital divide.
+<details>
+<summary>Click for answer</summary>
+
+**Answer:** (Any two of these)
+- **Digital literacy programs** - Free training at libraries/community centers
+- **Infrastructure investment** - Government funding for underserved areas
+- **Device access programs** - Low-cost or free devices for students in need
+- **Policy solutions** - Net neutrality, universal broadband initiatives, affordable internet programs
+</details>
+
+---
+
+## Study Tips
+
+1. **Focus on formulas:** Memorize 2ⁿ and 2ⁿ - 1 - they appear frequently
+2. **Know the differences:** TCP vs UDP, Lossless vs Lossy, IPv4 vs IPv6, Analog vs Digital
+3. **Understand real-world applications:** Connect concepts to everyday technology use
+4. **Practice conversions:** Binary to decimal and vice versa
+5. **Think about trade-offs:** Compression vs quality, Speed vs reliability, Cost vs redundancy

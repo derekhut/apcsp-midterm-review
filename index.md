@@ -12,6 +12,7 @@
 - [Calculations with Bits](#calculations-with-bits)
 - [Analog vs. Digital Data](#analog-vs-digital-data)
 - [Data Abstraction](#data-abstraction)
+- [Boolean Logic](#boolean-logic)
 - [Data Compression](#data-compression)
   - [Lossless Compression](#lossless-data-compression)
   - [Lossy Compression](#lossy-data-compression)
@@ -138,6 +139,81 @@ To store or process analog data digitally, we use sampling - recording values at
 - Example: Storing a date as "11/13/2025" instead of recording every millisecond
 - Using digital data to approximate real-world analog data is considered an abstraction
 - We accept this loss of precision for practical storage and processing
+
+---
+
+## Boolean Logic
+
+**Boolean value:** A data type with only two possible values: `true` or `false`
+
+Boolean logic is fundamental to computer science and programming. It allows computers to make decisions.
+
+### Boolean Operators
+
+#### NOT Operator
+**NOT:** Inverts the boolean value
+
+| Input | NOT Input |
+|-------|-----------|
+| true  | false     |
+| false | true      |
+
+**Example:** `NOT (5 > 3)` evaluates to `false` (because 5 > 3 is true, and NOT true = false)
+
+---
+
+#### AND Operator
+**AND:** Returns `true` only when **BOTH** conditions are true
+
+| Input A | Input B | A AND B |
+|---------|---------|---------|
+| true    | true    | true    |
+| true    | false   | false   |
+| false   | true    | false   |
+| false   | false   | false   |
+
+**Example:** `(5 > 3) AND (10 < 20)` evaluates to `true` (both conditions are true)
+
+**Example:** `(5 > 3) AND (10 > 20)` evaluates to `false` (second condition is false)
+
+---
+
+#### OR Operator
+**OR:** Returns `true` when **AT LEAST ONE** condition is true
+
+| Input A | Input B | A OR B |
+|---------|---------|--------|
+| true    | true    | true   |
+| true    | false   | true   |
+| false   | true    | true   |
+| false   | false   | false  |
+
+**Example:** `(5 > 3) OR (10 > 20)` evaluates to `true` (first condition is true)
+
+**Example:** `(5 < 3) OR (10 > 20)` evaluates to `false` (both conditions are false)
+
+---
+
+### Combining Boolean Operators
+
+Boolean expressions can be combined using multiple operators. Use parentheses to control order of operations.
+
+**Example:** `(true AND false) OR (true AND true)`
+- First evaluate parentheses: `false OR true`
+- Result: `true`
+
+**Example:** `NOT ((5 > 3) AND (10 < 20))`
+- First evaluate inner expression: `(true) AND (true)` = `true`
+- Then apply NOT: `NOT true` = `false`
+
+---
+
+### Boolean Logic in Real-World Applications
+
+**Real-world examples:**
+- An online store might use `(age >= 18) AND (hasAccount = true)` to check if someone can make a purchase
+- A shipping system might use `(isPremiumMember = true) OR (orderTotal > 50)` to determine if shipping is free
+- A security system might use `NOT (doorLocked = true)` to trigger an alarm
 
 ---
 
@@ -640,9 +716,44 @@ This divide creates inequalities in opportunities, resources, and participation 
 
 ---
 
+**Q5b:** Convert decimal 19 to binary.
+
+**Answer:**
+Find the largest power of 2 that fits, then work down:
+- 16 (2⁴) fits into 19 → **1** (remainder: 3)
+- 8 (2³) doesn't fit into 3 → **0**
+- 4 (2²) doesn't fit into 3 → **0**
+- 2 (2¹) fits into 3 → **1** (remainder: 1)
+- 1 (2⁰) fits into 1 → **1** (remainder: 0)
+
+Result: **10011**
+
+Verification: 16 + 0 + 0 + 2 + 1 = 19 ✓
+
+---
+
+**Q6:** Evaluate the expression: `(true OR false) AND (NOT false)`
+
+**Answer:**
+- Step 1: Evaluate `NOT false` = `true`
+- Step 2: Evaluate `true OR false` = `true`
+- Step 3: Evaluate `true AND true` = **true**
+
+---
+
+**Q7:** Evaluate the expression: `NOT ((10 > 5) AND (3 < 2))`
+
+**Answer:**
+- Step 1: Evaluate `10 > 5` = `true`
+- Step 2: Evaluate `3 < 2` = `false`
+- Step 3: Evaluate `true AND false` = `false`
+- Step 4: Evaluate `NOT false` = **true**
+
+---
+
 ### Computer Systems and Networks Section
 
-**Q6:** What are the two main components of a packet?
+**Q8:** What are the two main components of a packet?
 
 **Answer:**
 1. **Header** - Contains metadata (source address, destination address, sequence number, reassembly info)
@@ -650,13 +761,13 @@ This divide creates inequalities in opportunities, resources, and participation 
 
 ---
 
-**Q7:** Can packets arrive out of order? How are they reassembled?
+**Q9:** Can packets arrive out of order? How are they reassembled?
 
 **Answer:** **Yes**, packets can arrive out of order. TCP (Transmission Control Protocol) uses sequence numbers in the packet headers to reassemble them in the correct order at the destination.
 
 ---
 
-**Q8:** When would you choose UDP over TCP?
+**Q10:** When would you choose UDP over TCP?
 
 **Answer:** Choose UDP when **speed is more important than perfect accuracy**:
 - Live video streaming
@@ -666,13 +777,13 @@ This divide creates inequalities in opportunities, resources, and participation 
 
 ---
 
-**Q9:** Your home has 200 Mbps bandwidth but you experience lag when video calling. What's likely the issue?
+**Q11:** Your home has 200 Mbps bandwidth but you experience lag when video calling. What's likely the issue?
 
 **Answer:** The issue is likely **high latency**, not bandwidth. Latency (delay) affects real-time communication more than bandwidth. Distance, router hops, or network congestion could be causing the lag.
 
 ---
 
-**Q10:** How does redundancy improve fault tolerance?
+**Q12:** How does redundancy improve fault tolerance?
 
 **Answer:** Redundancy provides **backup components and alternate paths**. If one component fails (router, server, connection), traffic can automatically reroute through redundant systems, preventing complete system failure.
 
@@ -680,7 +791,7 @@ This divide creates inequalities in opportunities, resources, and participation 
 
 ### Digital Divide Section
 
-**Q11:** Name three factors that contribute to the digital divide.
+**Q13:** Name three factors that contribute to the digital divide.
 
 **Answer:**
 1. **Demographics** - Age and education level affect technology adoption
@@ -689,19 +800,93 @@ This divide creates inequalities in opportunities, resources, and participation 
 
 ---
 
-**Q12:** How did the 2020 COVID-19 pandemic highlight the digital divide in education?
+**Q14:** How did the 2020 COVID-19 pandemic highlight the digital divide in education?
 
 **Answer:** When schools shifted to virtual learning, students without stable internet or devices fell behind peers with reliable technology access. This created significant educational inequalities based on digital access.
 
 ---
 
-**Q13:** Suggest two ways to reduce the digital divide.
+**Q15:** Suggest two ways to reduce the digital divide.
 
 **Answer:** (Any two of these)
 - **Digital literacy programs** - Free training at libraries/community centers
 - **Infrastructure investment** - Government funding for underserved areas
 - **Device access programs** - Low-cost or free devices for students in need
 - **Policy solutions** - Net neutrality, universal broadband initiatives, affordable internet programs
+
+---
+
+### Advanced Practice Questions
+
+**Q16:** A school needs to assign unique student IDs to 600 students. How many bits are needed to represent all possible student IDs?
+
+**Answer:**
+- Need to find n where 2ⁿ ≥ 600
+- 2⁹ = 512 (not enough)
+- 2¹⁰ = 1024 (sufficient)
+- **Answer: 10 bits** are needed
+
+---
+
+**Q17:** A video streaming service uses both TCP and UDP protocols. Explain one reason why the service might use TCP and one reason why it might use UDP.
+
+**Answer:**
+- **TCP use case:** For downloading video files or buffering content, TCP ensures all data packets arrive correctly and in order, preventing file corruption
+- **UDP use case:** For live streaming events, UDP prioritizes speed over perfect accuracy, allowing real-time delivery even if some packets are lost (minor video glitches are acceptable for live content)
+
+---
+
+**Q18:** A photographer has a 24 MB RAW image file. After applying lossy compression to create a JPEG, the file is 3 MB. Later, they want to return to the original quality. Is this possible? Why or why not?
+
+**Answer:**
+- **No**, this is not possible
+- **Reason:** Lossy compression permanently removes data from the original file. Once converted to JPEG, the discarded pixel information cannot be recovered
+- **Best practice:** Always keep the original RAW file if you might need full quality later
+
+---
+
+**Q19:** Evaluate this complex boolean expression: `(NOT (5 < 3)) AND ((10 > 7) OR (4 == 4))`
+
+**Answer:**
+- Step 1: Evaluate `5 < 3` = `false`
+- Step 2: Evaluate `NOT false` = `true`
+- Step 3: Evaluate `10 > 7` = `true`
+- Step 4: Evaluate `4 == 4` = `true`
+- Step 5: Evaluate `true OR true` = `true`
+- Step 6: Evaluate `true AND true` = **true**
+
+---
+
+**Q20:** A company wants to design a fault-tolerant network for their critical servers. They have a budget constraint. Suggest two specific redundancy measures they could implement and explain one trade-off.
+
+**Answer:**
+**Two redundancy measures:**
+1. **Multiple network paths** - Install redundant routers and connections so data can reroute if one path fails
+2. **Backup servers** - Maintain duplicate servers that can take over if the primary server fails
+
+**Trade-off:**
+- **Cost vs. reliability** - Redundant systems require purchasing and maintaining duplicate hardware, significantly increasing expenses. The company must balance their budget against the risk and cost of potential downtime
+
+
+---
+
+**Q21:** Convert the decimal number 156 to binary, then calculate how many unique values can be represented with the same number of bits.
+
+**Answer:**
+**Part 1 - Convert 156 to binary:**
+- 128 (2⁷) fits into 156 → **1** (remainder: 28)
+- 64 (2⁶) doesn't fit into 28 → **0**
+- 32 (2⁵) doesn't fit into 28 → **0**
+- 16 (2⁴) fits into 28 → **1** (remainder: 12)
+- 8 (2³) fits into 12 → **1** (remainder: 4)
+- 4 (2²) fits into 4 → **1** (remainder: 0)
+- 2 (2¹) doesn't fit into 0 → **0**
+- 1 (2⁰) doesn't fit into 0 → **0**
+
+Binary: **10011100**
+
+**Part 2 - Unique values with 8 bits:**
+- Formula: 2ⁿ = 2⁸ = **256 unique values** (0-255)
 
 ---
 
